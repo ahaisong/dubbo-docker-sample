@@ -2,6 +2,7 @@ package com.alibaba.dubbo.test.docker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.ImportResource;
 
 import java.io.IOException;
@@ -11,7 +12,7 @@ import java.io.IOException;
 public class App {
 
 	public static void main(String[] args) throws IOException {
-		SpringApplication.run(App.class, args);
+		new SpringApplicationBuilder(App.class).web(false).run(args);
 		System.in.read();
 	}
 }
