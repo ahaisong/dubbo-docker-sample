@@ -4,7 +4,12 @@
 * DUBBO_IP_TO_BIND --- 监听ip地址  
 * DUBBO_PORT_TO_BIND --- 监听port端口 
 
-以上四个配置项均为可选项，如不配置dubbo会自动获取ip与端口，请根据具体的部署场景灵活选择配置。 
+> 1. 以上四个配置项均为可选项，如不配置dubbo会自动获取ip与端口，请根据具体的部署场景灵活选择配置。 
+> 2. dubbo支持多协议，**如果一个应用同时暴露多个不同协议服务，且需要为每个服务单独指定ip或port，请分别在以上属性前加协议前缀。** 如：  
+> * HESSIAN_DUBBO_PORT_TO_BIND    hessian协议绑定的port
+> * DUBBO_DUBBO_PORT_TO_BIND      dubbo协议绑定的port
+> * HESSIAN_DUBBO_IP_TO_REGISTRY  hessian协议注册的ip
+> * DUBBO_DUBBO_PORT_TO_BIND      dubbo协议注册的ip
 
 [dubbo-docker-sample](https://github.com/dubbo/dubbo-docker-sample)工程本地运行流程： 
  
